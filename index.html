@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>0610</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Jerry Cheang</title>
+
+	<!-- Google Fonts & FontAwesome -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<!-- Glow Cursor -->
+	<div class="cursor-bubble"></div>
+	<!-- Back to Top -->
+	<button id="back-top" aria-label="回到頂端">↑</button>
+
+	<!-- Header -->
+	<header class="glass">
+		<div class="container">
+			<input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+			<label class="hamburger" for="nav-toggle"><span></span><span></span><span></span></label>
+			<nav>
+				<span class="logo">Jerry Cheang</span>
+				<ul class="nav-links">
+					<li><a href="#hero">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#experience">Experiences</a></li>
+					<li><a href="#certificates">Certificate</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><button id="theme-toggle" class="theme-btn" aria-label="切換佈景">🌙</button></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Hero -->
+	<section id="hero" class="hero" data-animate="fade-up">
+		<canvas id="bg-stars"></canvas>
+		<div class="blob blob1"></div>
+		<div class="blob blob2"></div>
+		<div class="hero-inner container">
+			<h1 style="font-family:'Orbitron',Poppins,sans-serif">
+				Hello, I am <span class="primary">Jerry Cheang</span>
+			</h1>
+			<p class="lead">A student from CDSJ5</p>
+			<a href="#about" class="cta-btn glass neon-border" data-animate="zoom-in">Let's go</a>
+		</div>
+	</section>
+	
+	</section>
+
+	<!-- About -->
+	<section id="about" class="section" data-animate="fade-up">
+		<h2>About Me</h2>
+		<div class="container about-grid">
+      
+			<figure class="profile-pic neon-border no-filter-img">
+				<div class="pure-image-container">
+					<img src="https://imgur.com/d3tcImv.jpg" alt="個人圖片">
+				</div>
+			</figure>
+
+			<div>
+				<h3>Information:</h3>
+				<ul class="info-list">
+					<li><strong>Name: </strong>Jerry Cheang</li>
+          <li><strong>Date of birth: </strong>2008/07/08</li>
+          <li><strong>Location: </strong>Macao</li>
+          <li><strong>Current Role: </strong>Student</li>
+					<li><strong>School: </strong>Colégio Diocesano de São José (5ª).</li>
+          <li><strong>Languages: </strong>Cantonese, Mandarin, English</li>
+          <li><strong>Interests: </strong>Football, Playing Online Game</li>
+				</ul>
+			</div>
+			<div class="about-desc">
+				<h3>Self-Introduction:</h3>
+				<p>Hello! I'm a tech enthusiast passionate about programming, robotics, and creative innovation. With experience in programming and AI-driven projects, I enjoy building solutions that combine logic and imagination. I aim to use technology to improve everyday life and connect people through meaningful applications.</p>
+	
+			</div>
+		</div>
+	</section>
+	<div class="wave-divider">
+		<svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+			<path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="var(--clr-bg)" />
+		</svg>
+	</div>
+
+	<!-- Skills -->
+	<section id="skills" class="section alt-bg" data-animate="fade-up">
+		<h2>Skills</h2>
+		<div class="skill-filter">
+			<button class="chip active" data-category="all">All</button>
+			<button class="chip" data-category="lang">Programming laugage</button>
+			<button class="chip" data-category="frontend">Website</button>
+			<button class="chip" data-category="backend">Microsoft</button>
+			<button class="chip" data-category="tools">Other</button>
+		</div>
+		<div class="container skills-grid">
+			<div class="skill-item glass neon-border" data-category="lang" tabindex="0">
+				<h4>Python</h4>
+				<div class="progress-bar"><span style="--value:80%"></span></div>
+			</div>
+			<div class="skill-item glass neon-border" data-category="lang" tabindex="0">
+				<h4>C++</h4>
+				<div class="progress-bar"><span style="--value:50%"></span></div>
+			</div>
+			<div class="skill-item glass neon-border" data-category="lang" tabindex="0">
+				<h4>C</h4>
+				<div class="progress-bar"><span style="--value:65%"></span></div>
+			</div>
+
+			<div class="skill-item glass neon-border" data-category="frontend" tabindex="0">
+				<h4>HTML</h4>
+				<div class="progress-bar"><span style="--value:50%"></span></div>
+			</div>
+			<div class="skill-item glass neon-border" data-category="frontend" tabindex="0">
+				<h4>CSS</h4>
+				<div class="progress-bar"><span style="--value:48%"></span></div>
+			</div>
+			<div class="skill-item glass neon-border" data-category="frontend" tabindex="0">
+				<h4>JavaScript</h4>
+				<div class="progress-bar"><span style="--value:30%"></span></div>
+			</div>
+
+			<div class="skill-item glass neon-border" data-category="backend" tabindex="0">
+				<h4>Word</h4>
+				<div class="progress-bar"><span style="--value:78%"></span></div>
+			</div>
+			<div class="skill-item glass neon-border" data-category="backend" tabindex="0">
+				<h4>Excel</h4>
+				<div class="progress-bar"><span style="--value:80%"></span></div>
+			</div>
+			<div class="skill-item glass neon-border" data-category="backend" tabindex="0">
+				<h4>PowePoint</h4>
+				<div class="progress-bar"><span style="--value:85%"></span></div>
+			</div>
+
+			<div class="skill-item glass neon-border" data-category="tools" tabindex="0">
+				<h4>Belender</h4>
+				<div class="progress-bar"><span style="--value:40%"></span></div>
+			</div>
+      <div class="skill-item glass neon-border" data-category="tools" tabindex="0">
+				<h4>Alice 3D</h4>
+				<div class="progress-bar"><span style="--value:80%"></span></div>
+			</div>
+		</div>
+	</section>
+	<div class="wave-divider">
+		<svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+			<path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="var(--clr-bg-alt)" />
+		</svg>
+	</div>
+
+  		<!-- Experience -->
+	<section id="experience" class="section" data-animate="fade-up">
+		<h2 data-animate="fade-up">Experiences</h2>
+		<div class="container">
+
+			<!-- 校內活動子區 -->
+			<h3 class="sub-section-title" data-animate="fade-up">School Activities</h3>
+			<div class="timeline" data-animate="fade-up">
+				<!-- school events -->
+				<div class="tl-item neon-border open">
+					<h3>🤖 Robotics Class</h3>
+					<small>2017/09 – 2019/06</small>
+					<div class="tl-desc">My first exposure to robotics sparked my interest in technology. I learned basic mechanical design, teamwork, and how to follow logical procedures to build functional robots for school exhibitions and demonstrations.</div>
+				</div>
+
+				<div class="tl-item neon-border open">
+					<h3>🤖 Rejoin Robotics Class</h3>
+					<small>2021/05 – 2022/06</small>
+					<div class="tl-desc">I returned with a deeper understanding of hardware, sensors, and motor control. I joined competitions, applied programming to robotic behavior, and developed better problem-solving and debugging skills through hands-on practice.</div>
+				</div>
+
+				<div class="tl-item neon-border open">
+					<h3>💻 Programming Class</h3>
+					<small>2022/09 – Now</small>
+					<div class="tl-desc">Focused on Programming language for software development. I joined some activities and competitions. These experiences sharpened my logical thinking, coding habits, and ability to turn ideas into digital products.</div>
+				</div>
+
+				<div class="tl-item neon-border">
+					<h3>🏫 Student Union</h3>
+					<small>2024/09 – Now</small>
+					<div class="tl-desc">As a member of the Student Union's Secretary Division, I manage event documentation, meeting minutes, and assist with coordination. This role strengthened my organizational and written communication skills.</div>
+				</div>
+				<div class="tl-item neon-border">
+					<h3>🤝 Volunteer Team</h3>
+					<small>2024/09 – Now</small>
+					<div class="tl-desc">I participated in flag-selling events, food donation, and venue setup as part of the volunteer team. These experiences taught me teamwork, responsibility, and the value of community service.</div>
+				</div>
+			</div>   
+      </section>
+
+		<!-- Certificates -->
+	<section id="certificates" class="section alt-bg" data-animate="fade-up">
+		<h2>Certificates &amp; Awards</h2>
+		<div class="cert-filter">
+			<button class="chip active" data-tag="all">All</button>
+			<button class="chip" data-tag="cs">Information Technology</button>
+			<button class="chip" data-tag="lang">Maths</button>
+      <button class="chip" data-tag="office">Microsoft Office</button>
+			<button class="chip" data-tag="innovation">Other</button>
+		</div>
+		
+		<h3 class="cert-group-title">Information Technology</h3>
+		<div class="container cert-grid">
+			<div class="cert-card glass neon-border" data-tag="cs">
+				<img src="https://imgur.com/ZLGM53z.jpg" alt="GMCC">
+				<h4>GMCC 2022 - Merit Award</h4>
+				<p>2022</p>
+			</div>
+			<div class="cert-card glass neon-border" data-tag="cs">
+				<img src="https://imgur.com/NPovi4j.jpg" alt="ROBOFEST">
+				<h4>ROBOFEST - 2nd Place</h4>
+				<p>2022</p>
+			</div>
+			<div class="cert-card glass neon-border" data-tag="cs">
+				<img src="https://imgur.com/AVyCZO0.jpg" alt="AI Challenge">
+				<h4>第一屆澳門人工智能創新挑戰賽 - Merit Award</h4>
+				<p>2023</p>
+			</div>
+			<div class="cert-card glass neon-border" data-tag="cs">
+				<img src="https://imgur.com/w0fVoob.jpg" alt="FISO Digital Technology">
+				<h4>FISO Digital Technology - Silver Award</h4>
+				<p>2024</p>
+			</div>
+      <div class="cert-card glass neon-border" data-tag="cs">
+        <img src="https://imgur.com/JxV8tUU.jpg" alt="FISO Digital Technology">
+        <h4>微信小程序挑戰賽 - First Prize</h4>
+        <p>2025</p>
+      </div>
+      <div class="cert-card glass neon-border" data-tag="cs">
+        <img src="https://imgur.com/qelnuH2.jpg" alt="AI Challenge">
+        <h4>大灣區人工智能及網絡安全挑戰賽2024 - Champion</h4>
+        <p>2025</p>
+      </div>
+		</div>
+	
+		<h3 class="cert-group-title">Mathematics</h3>
+		<div class="container cert-grid">
+			<div class="cert-card glass neon-border" data-tag="lang">
+				<img src="https://i.imgur.com/C5YzwaY.jpg" alt="FISO Mathematics">
+				<h4>FISO Mathematics - Bronze Award</h4>
+				<p>2024</p>
+			</div>
+			<div class="cert-card glass neon-border" data-tag="lang">
+				<img src="https://imgur.com/JIJkZjZ.jpg" alt="Outstanding Award">
+				<h4>Singapore Maths Challenge - Outstanding Award</h4>
+				<p>2024</p>
+			</div>
+    </div>
+    
+    <h3 class="cert-group-title">Microsoft Office</h3>
+    <div class="container cert-grid">
+      <div class="cert-card glass neon-border" data-tag="office">
+        <img src="https://imgur.com/SJXRQUm.jpg" alt="Excel Associate">
+        <h4>Excel Associate 2019</h4>
+        <p>2024</p>
+      </div>
+      <div class="cert-card glass neon-border" data-tag="office">
+        <img src="https://imgur.com/eCFZBL4.jpg" alt="Word Associate">
+        <h4>Word Associate 2019</h4>
+        <p>2024</p>
+      </div>
+      <div class="cert-card glass neon-border" data-tag="office">
+        <img src="https://imgur.com/nyGHGBR.jpg" alt="PowerPoint">
+        <h4>PowerPoint Associate 2019</h4>
+        <p>2024</p>
+      </div>
+      <div class="cert-card glass neon-border" data-tag="office">
+        <img src="https://imgur.com/wuzcMv1.jpg" alt="Excel Expert">
+        <h4>Excel Expert 2019</h4>
+        <p>2024</p>
+      </div>
+      <div class="cert-card glass neon-border" data-tag="office">
+        <img src="https://imgur.com/Wx4oFyV.jpg" alt="Word Expert">
+        <h4>Word Expert 2019</h4>
+        <p>2025</p>
+      </div>
+    </div>
+    
+		<h3 class="cert-group-title">Other</h3>
+		<div class="container cert-grid">
+			<div class="cert-card glass neon-border" data-tag="innovation">
+				<img src="https://imgur.com/jFwUDzu.jpg" alt="FISO Mathematics">
+				<h4>FISO Science - Merit Award</h4>
+				<p>2024</p>
+			</div>
+		</div>
+
+	</section>
+	
+		
+	<!-- Projects -->
+	<section id="projects" class="section" data-animate="fade-up">
+		<h2>Projects</h2>
+		<div class="container proj-grid">
+			<article class="proj-card neon-border" data-tilt>
+				<img src="https://imgur.com/4c7yBGO.jpg" alt="EcoBus Demo">
+				<div class="proj-body">
+					<h3>Arduino Drawing Machine</h3>
+					<p>Powered by Arduino, this drawing machine integrates stepper motors and 3D-printed structures. It supports multiple drawing modes, including preset shapes and custom designs, with an accuracy drawing and high creative flexibility.</p>
+					<div class="tags"><span>Arduino</span><span>C Program</span><span>3D Print</span></div>
+					<p><a href="https://youtu.be/3xssfnvArZg" class="link-primary" target="_blank">Video</a>
+				</div>
+			</article>
+
+			<article class="proj-card neon-border" data-tilt>
+				<img src="https://imgur.com/cM7RNNZ.jpg" alt="SmartNotes">
+				<div class="proj-body">
+					<h3>3D Animation</h3>
+					<p>This project focuses on climate change, using Alice 3.x to build 3D scenes combined with AI technology. Through a time-travel story, it shows future climate disasters and presents smart energy solutions, creating an animation that is both visually striking and educational.</p>
+					<div class="tags"><span>Alice 3D Animation</span><span>AI</span><span>3D Models</span></div>
+					<p><a href="https://youtu.be/my_ZYo1p090" class="link-primary" target="_blank">Video</a>
+				</div>
+			</article>
+
+			<article class="proj-card neon-border" data-tilt>
+				<img src="https://imgur.com/CxD9rSV.jpg" alt="STEM Club">
+				<div class="proj-body">
+					<h3>SmartGuard</h3>
+					<p>Produced a demonstration video showcasing the innovative application of the AI Anti-Fraud System (SmartGuard). Through intuitive visual presentation, the video illustrates how machine learning and behavioral analysis technologies can identify emerging cyber threats like phishing websites and social engineering scams, while providing real-time warning protection.</p>
+					<div class="tags"><span>Internet</span><span>AI</span><span>Machine Learing</span></div>
+					<p><a href="https://www.youtube.com/watch?v=uD_YT-smvVU&ab_channel=JerryCheang" class="link-primary">Video</a> 
+				</div>
+			</article>
+      
+      <article class="proj-card neon-border" data-tilt>
+				<img src="https://imgur.com/VlFlPB2.png" alt="Lamsi Football">
+				<div class="proj-body">
+					<h3>Robot Football Match</h3>
+					<p>For our school's STEM Day, my classmates and I designed and organized an interactive Robot Football Match to engage students across different grade levels. This hands-on activity combined programming, engineering, and teamwork, allowing participants to control custom-built robots in a fun, competitive football game.</p>
+					<div class="tags"><span>STEM</span><span>Robot</span><span>Football</span></div>
+				</div>
+			</article>
+		</div>
+    
+	</section>
+
+	<section id="contact" class="section contact-section">
+			<div class="contact-container">
+				<!-- 左側：電話和電子郵件 -->
+				<div class="contact-info-wrapper">
+					<h3>Contact:</h3>
+					<p><i class="fas fa-phone"></i> Phone Number: 
+            <p>+853 6885 5276</p>
+					<p><i class="fas fa-envelope"></i> Email:
+            <p> cheangjerry@gmail.com</p>
+				</div>
+
+				<!-- 右側：社交圖示 -->
+				<div class="contact-social-wrapper">
+					<h3>Social Media</h3>
+					<div class="social-icons">
+						<a href="https://www.instagram.com/jerrycheang0708?igsh=YWRvZTUyYWwycmpt&utm_source=qr" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+	</section>
+    
+	<!-- Main Script -->
+	<script src="script.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
