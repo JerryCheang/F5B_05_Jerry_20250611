@@ -147,6 +147,7 @@ topBtn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
 
 /* 11. Certificates Filter */
 const chips = document.querySelectorAll(".cert-filter .chip");
+
 chips.forEach(
 	(chip) =>
 		(chip.onclick = () => {
@@ -164,6 +165,77 @@ chips.forEach(
 			});
 		})
 );
+
+// 在頁面載入時觸發 "All" 篩選，確保證書顯示
+document.addEventListener("DOMContentLoaded", () => {
+	const allChip = document.querySelector('.cert-filter .chip[data-tag="all"]');
+	if (allChip) {
+		allChip.click();
+	}
+
+	// 證書圖片放大功能
+	const certImgs = document.querySelectorAll('.cert-img');
+	const certModal = document.getElementById('cert-modal');
+	const certModalImg = document.getElementById('cert-modal-img');
+	const certModalBackdrop = document.querySelector('.cert-modal-backdrop');
+
+	certImgs.forEach(img => {
+		img.addEventListener('click', () => {
+			certModalImg.src = img.src;
+			certModal.style.display = 'flex';
+			document.body.style.overflow = 'hidden';
+		});
+	});
+
+	function closeCertModal() {
+		certModal.style.display = 'none';
+		certModalImg.src = '';
+		document.body.style.overflow = '';
+	}
+
+	certModalBackdrop.addEventListener('click', closeCertModal);
+	certModalImg.addEventListener('click', closeCertModal);
+	document.addEventListener('keydown', (e) => {
+		if (certModal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
+			closeCertModal();
+		}
+	});
+
+	// 作品影片播放功能
+	const videoLinks = document.querySelectorAll('.proj-video-link');
+	const videoModal = document.getElementById('video-modal');
+	const videoIframe = document.getElementById('video-iframe');
+	const videoModalClose = document.getElementById('video-modal-close');
+	const videoModalBackdrop = document.querySelector('.video-modal-backdrop');
+
+	function openVideoModal(videoId) {
+		videoIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+		videoModal.style.display = 'flex';
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeVideoModal() {
+		videoModal.style.display = 'none';
+		videoIframe.src = '';
+		document.body.style.overflow = '';
+	}
+
+	videoLinks.forEach(link => {
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
+			const videoId = link.dataset.videoId;
+			openVideoModal(videoId);
+		});
+	});
+
+	videoModalClose.addEventListener('click', closeVideoModal);
+	videoModalBackdrop.addEventListener('click', closeVideoModal);
+	document.addEventListener('keydown', (e) => {
+		if (videoModal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
+			closeVideoModal();
+		}
+	});
+});
 
 /* 12. Skills Filter */
 const skillChips = document.querySelectorAll(".skill-filter .chip");
